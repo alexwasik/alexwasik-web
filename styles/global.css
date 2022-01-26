@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+body {
+  font-family: 'Poiret One', cursive;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.ant-typography ul li {
+  list-style-type: none;
+  margin: 0;
+  padding-right: 10px;
+}
