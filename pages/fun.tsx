@@ -11,6 +11,7 @@ export interface FunItem {
   description: string;
   url: string;
   image: string;
+  priority?: boolean;
 }
 
 const { Meta } = Card;
@@ -40,6 +41,7 @@ const Fun = () => {
                   src={item.image}
                   width={800}
                   height={500}
+                  priority={item.priority || false}
                 />
               }
             >

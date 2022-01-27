@@ -1,6 +1,6 @@
 .content {
   display: flex;
-  min-height: 90vh;
+  min-height: 75vh;
   margin: 50px 50px;
   z-index: 2;
 }

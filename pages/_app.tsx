@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app'
 
 import { Layout } from 'antd';
 import HeaderComponent from '../components/HeaderComponent';
+import FooterComponent from '../components/FooterComponent';
 
 import '../styles/global.css'
 import styles from '../styles/base.module.css'
@@ -19,7 +20,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Content className={styles.content}>
         <Component {...pageProps} />
       </Content>
-      <Footer>Footer</Footer>
+      <Footer>
+        <FooterComponent />
+      </Footer>
     </Layout>
   );
 }
