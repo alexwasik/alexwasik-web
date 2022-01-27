@@ -26,6 +26,14 @@
     paddingRight: 5
   }
 
+  const xsImageStyle = {
+    marginLeft: '-275px',
+  }
+
+  const mdImageStyle = {
+    marginLeft: '200px',
+  }
+
   export {
     mdTitleStyle,
     mdTitleTextStyle,
@@ -34,4 +42,6 @@
     xsTitleTextStyle,
     xsTitleStyle,
     iconStyle,
+    xsImageStyle,
+    mdImageStyle,
   }

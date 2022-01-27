@@ -1,20 +1,8 @@
-.content::before {
-  content: '';
-  background-image: url('../public/assets/me.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  opacity: 0.2;
-}
-
 .content {
   display: flex;
   min-height: 90vh;
   margin: 75px 50px;
+  z-index: 2;
 }
 
 .contentCenter {
@@ -22,6 +10,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .header {
@@ -32,4 +21,14 @@
 
 .cardTitle {
   text-align: center;
+}
+
+.image {
+  position: absolute;
+  left: 50%;
+  border-radius: 50%;
+  opacity: 0.3;
+  z-index: 1;
+  width: 475px;
+  height: 500px;
 }
