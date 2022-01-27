@@ -7,8 +7,8 @@ const HeaderComponent = () => {
     <>
       <Row justify='space-around'>
         <Col
-          span={6}
-          style={{ paddingTop: 10 }}>
+          span={4}
+        >
           <Button
             type='link'
             size='large'
@@ -20,14 +20,42 @@ const HeaderComponent = () => {
           />
         </Col>
         <Col
-          span={6}>
-          <Button type='link' href='/articles'>Articles</Button>
+          span={4}>
+          <Button 
+            size='large'
+            type='link'
+            href='/articles'
+          >
+            Articles
+          </Button>
         </Col>
-        <Col span={6}>
-          <Button type='link' href='https://www.github.com/alexwasik' target='_blank'>GitHub</Button>
+        <Col span={4}>
+          <Button
+            size='large'
+            type='link'
+            href='/fun'
+          >
+            For Fun
+          </Button>
         </Col>
-        <Col span={6}>
-          <Button type='link' href='/resume'>Resume</Button>
+        <Col span={4}>
+          <Button
+            size='large'
+            type='link'
+            href='https://www.github.com/alexwasik'
+            target='_blank'
+          >
+            GitHub
+          </Button>
+        </Col>
+        <Col span={4}>
+          <Button
+            size='large'
+            type='link'
+            href='/resume'
+          >
+            Resume
+          </Button>
         </Col>
       </Row>
     </>

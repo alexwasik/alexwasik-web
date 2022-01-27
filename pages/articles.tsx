@@ -1,7 +1,8 @@
 import React from 'react';
-import Image, { ImageLoaderProps } from 'next/image';
+import Image from 'next/image';
 import { Card, Col, Row, Space } from 'antd';
 import styles from '../styles/base.module.css'
+import { myLoader, openLink } from '../helpers/helpers';
 
 const { Meta } = Card;
 
@@ -25,21 +26,11 @@ export interface ContentItem {
   categories: string[]
 }
 
-const myLoader = ({ src }: ImageLoaderProps) => {
-  return src
-}
-
-const openArticle = (link: string) => {
-  window.open(link, '_blank')
-}
-
 function Articles({ items }: ItemsProps) {
   return (
     <div>
       <Row justify='center' gutter={[24,24]}>
-        {items.map((item: ContentItem) => {
-          console.log('image', item.thumbnail);
-          
+        {items.map((item: ContentItem) => {          
           return (
             <Col
               xs={24}
@@ -47,10 +38,9 @@ function Articles({ items }: ItemsProps) {
               key={item.title}
             >
               <Card
-                bodyStyle={{ background: '#716f72' }}
-                // style={{ minHeight: 250}}
+                // bodyStyle={{ background: '#716f72' }}
                 hoverable
-                onClick={() => openArticle(item.link)}
+                onClick={() => openLink(item.link)}
                 cover={
                   <Image
                     unoptimized={true}
