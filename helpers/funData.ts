@@ -6,6 +6,7 @@ const data = [
     url: "https://www.npmjs.com/package/just-jokes",
     alt: 'just jokes image',
     image: "./assets/justjokes.png",
+    priority: true,
   },
   {
     key: 2,
