@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { Col, Grid, Image, Row, Typography } from 'antd'
 import { RightOutlined } from '@ant-design/icons'
 import type { NextPage } from 'next'
@@ -21,6 +22,14 @@ const Home: NextPage = () => {
   const { xs, md } = useBreakpoint();
 
   return (
+    <div>
+      <Head>
+        <title>Alex Wasik</title>
+        <meta name='description' content='Alex Wasik - Full Stack Software Developer' />
+        <meta name='keywords' content='alex wasik, software, developer, software developer' />
+        <meta name='robots' content='index, follow' />
+        <meta name='DC.title' content='Alex Wasik - Full Stack Software Developer' />
+      </Head>
     <Row>
       <Row style={{ width: '100vw'}}>
         <Col
@@ -52,13 +61,14 @@ const Home: NextPage = () => {
         >
           <Paragraph>
             I am a self-taught Full Stack Developer with a passion for creating Things. All kinds of Things. I love trying new technologies
-            and spinning up applications just to try a thing. With professional experience ranging from  tiny startups with an 
-            MVP to Large Corporations, I enjoy working with other developers, designers and clients to create things that are
+            and spinning up applications just to try a thing. With professional experience ranging from tiny startups with an 
+            MVP to Large Corporations. I&apos;ve worked on SasS platforms, internal helper tools, done Consulting, Freelance, and helped build
+            development teams. I enjoy working with other developers, designers and clients to create things that are 
             useful and easy to use. I am always looking for new opportunities to learn and grow.
           </Paragraph>
           <Paragraph>
             I truly enjoy mentoring developers looking to break in to our industry and helping them grow.
-            I really enjoy working with React, Node and Express. I am a fan of the open-source community and am always looking to learn more.
+            I am a fan of the open-source community and am always looking to experience something new.
           </Paragraph>
           <Paragraph>
             <Row>
@@ -89,6 +99,7 @@ const Home: NextPage = () => {
         </Col>
       </Row>
     </Row>
+    </div>
   )
 }
 
