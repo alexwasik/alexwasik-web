@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 import "antd/dist/antd.dark.less";
 import type { AppProps } from 'next/app'
 import "@fontsource/poiret-one";
@@ -13,6 +15,11 @@ const { Header, Footer, Content } = Layout;
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
+    <div>
+      <Head>
+        <title>Alex Wasik</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
     <Layout>
       <Header className={styles.header}>
         <HeaderComponent />
@@ -24,6 +31,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <FooterComponent />
       </Footer>
     </Layout>
+    </div>
   );
 }
 

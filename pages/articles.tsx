@@ -1,3 +1,5 @@
+
+import Head from 'next/head';
 import React from 'react';
 import Image from 'next/image';
 import { Card, Col, Row, Space } from 'antd';
@@ -29,6 +31,13 @@ export interface ContentItem {
 function Articles({ items }: ItemsProps) {
   return (
     <div>
+      <Head>
+        <title>Alex Wasik - Articles</title>
+        <meta name='description' content='Alex Wasik - Resume' />
+        <meta name='keywords' content='alex wasik, software, developer, software developer, articles' />
+        <meta name='robots' content='index, follow' />
+        <meta name='DC.title' content='Alex Wasik - Articles' />
+      </Head>          
       <Row justify='center' gutter={[24,24]}>
         {items.map((item: ContentItem) => {          
           return (
