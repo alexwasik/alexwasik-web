@@ -1,6 +1,6 @@
 import "antd/dist/antd.dark.less";
 import type { AppProps } from 'next/app'
-
+import "@fontsource/poiret-one";
 import { Layout } from 'antd';
 import HeaderComponent from '../components/HeaderComponent';
 import FooterComponent from '../components/FooterComponent';
