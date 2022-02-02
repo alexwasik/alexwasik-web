@@ -45,7 +45,7 @@ const Home: NextPage = () => {
               <Text style={ md ? mdTitleTextStyle : xsTitleTextStyle}>Alex Wasik</Text>
               <Image
                 // style={ xs ? xsImageStyle : md ? mdImageStyle : lg ? lgImageStyle }
-                style={imageStyle(breakpoints)}
+                style={imageStyle(breakpoints as Breakpoints)}
                 preview={false}
                 src="./assets/me.jpg"
                 alt="me"
