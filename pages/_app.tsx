@@ -20,17 +20,17 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>Alex Wasik</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-    <Layout>
-      <Header className={styles.header}>
-        <HeaderComponent />
-      </Header>
-      <Content className={styles.content}>
-        <Component {...pageProps} />
-      </Content>
-      <Footer>
-        <FooterComponent />
-      </Footer>
-    </Layout>
+      <Layout>
+        <Header className={styles.header}>
+          <HeaderComponent />
+        </Header>
+        <Content>
+          <Component {...pageProps} />
+        </Content>
+        <Footer>
+          <FooterComponent />
+        </Footer>
+      </Layout>
     </div>
   );
 }

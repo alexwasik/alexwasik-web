@@ -10,8 +10,10 @@ import {
   xsTitleTextStyle,
   xsSecondaryTextStyle,
   iconStyle,
+  lgImageStyle,
   xsImageStyle,
   mdImageStyle,
+  imageStyle,
 } from '../styles/homeStyles';
 import styles from '../styles/base.module.css';
 
@@ -19,6 +21,7 @@ const { Text, Paragraph } = Typography
 const { useBreakpoint } = Grid;
 
 const Home: NextPage = () => {
+  const breakpoints = useBreakpoint();
   const { xs, md } = useBreakpoint();
 
   return (
@@ -31,36 +34,38 @@ const Home: NextPage = () => {
         <meta name='DC.title' content='Alex Wasik - Full Stack Software Developer' />
       </Head>
     <Row>
-      <Row style={{ width: '100vw'}}>
+      <Row>
         <Col
           style={md ? mdTitleStyle : xsTitleStyle}
-          xs={{ span: 24, offset: 2}}
-          md={{ span: 24, push: 4 }}
+          xs={{ span: 14 }}
+          md={{ span: 14, push: 8 }}
         >
           <Row>
-            <Text style={ md ? mdTitleTextStyle : xsTitleTextStyle}>Alex Wasik</Text>
-            <Image
-              style={ xs ? xsImageStyle : mdImageStyle }
-              preview={false}
-              src="./assets/me.jpg"
-              alt="me"
-              className={styles.image}
-            />
-
-          </Row>
-          <Row>
-            <Text style={ md ? mdSecondaryTextStyle : xsSecondaryTextStyle} type='secondary'>Full Stack Developer</Text>
+            <Col span={24}>
+              <Text style={ md ? mdTitleTextStyle : xsTitleTextStyle}>Alex Wasik</Text>
+              <Image
+                // style={ xs ? xsImageStyle : md ? mdImageStyle : lg ? lgImageStyle }
+                style={imageStyle(breakpoints)}
+                preview={false}
+                src="./assets/me.jpg"
+                alt="me"
+                className={styles.image}
+              />
+            </Col>
+            <Col span={24}>
+              <Text style={ md ? mdSecondaryTextStyle : xsSecondaryTextStyle} type='secondary'>Full Stack Developer</Text>
+            </Col>
           </Row>
         </Col>
       </Row>
       <Row justify='center' align='top'>
         <Col
-          xs={{ span: 24 }}
-          md={{ span: 16 }}
+          xs={{ span: 20 }}
+          md={{ span: 14 }}
           xl={{ span: 8 }}
         >
           <Paragraph>
-            I am a self-taught Full Stack Developer with a passion for creating Things. All kinds of Things. I love trying new technologies
+            I am a Full Stack Developer with a passion for creating Things. All kinds of Things. I love trying new technologies
             and spinning up applications just to try a thing. With professional experience ranging from tiny startups with an 
             MVP to Large Corporations. I&apos;ve worked on SasS platforms, internal helper tools, done Consulting, Freelance, and helped build
             development teams. I enjoy working with other developers, designers and clients to create things that are 

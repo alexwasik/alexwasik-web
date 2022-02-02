@@ -1,5 +1,13 @@
-  const mdTitleStyle = {
-    paddingTop: '100px',
+type Breakpoints = {
+  xs: boolean;
+  sm: boolean;
+  md: boolean;
+  lg: boolean;
+  xl: boolean;
+}
+
+const mdTitleStyle = {
+    padding: '100px 0 50px 0',
   }
   const mdTitleTextStyle = {
     fontSize: 64
@@ -18,7 +26,7 @@
   }
 
   const xsTitleStyle = {
-    paddingTop: '100px',
+    padding: '100px 0 50px 0',
   }
 
   const iconStyle = {
@@ -26,12 +34,67 @@
     paddingRight: 5
   }
 
+  const imageStyle = (breakpoints: Breakpoints) => {
+    console.log('breakpoints', breakpoints);
+    const { xs, sm, md, lg, xl } = breakpoints;
+    if (xs) {
+      console.log('xs');
+      return {
+        marginLeft: 10,
+        marginTop: 100,
+        width: 200,
+        height: 200,
+      }
+    }
+    if (sm && !md) {
+      console.log('sm');
+      return {
+        marginLeft: 250,
+        marginTop: 100,
+        width: 300,
+        height: 300,
+      }
+    }
+    if (md && !xl) {
+      console.log('midup');
+      return {
+        marginLeft: -250,
+        marginTop: 150,
+        width: 475,
+        height: 500,
+      }
+    }
+    if (lg && !xl) {
+      console.log('lg');
+      return {
+        marginLeft: -75,
+        marginTop: 200,
+        width: 475,
+        height: 500,
+      }
+    }
+
+    if (lg && xl) {
+      console.log('lg');
+      return {
+        marginLeft: 500,
+        marginTop: 150,
+        width: 475,
+        height: 500,
+      }
+    }
+  }
+
   const xsImageStyle = {
-    marginLeft: '-275px',
+    marginLeft: '-190px',
   }
 
   const mdImageStyle = {
-    marginLeft: '200px',
+    marginLeft: '130px',
+  }
+
+  const lgImageStyle = {
+    marginLeft: '500px',
   }
 
   export {
@@ -44,4 +107,6 @@
     iconStyle,
     xsImageStyle,
     mdImageStyle,
+    lgImageStyle,
+    imageStyle,
   }
