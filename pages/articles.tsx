@@ -29,6 +29,12 @@ export interface ContentItem {
 }
 
 function Articles({ items }: ItemsProps) {
+  const parseThumbnail = (item: ContentItem) => {
+    const thumbnail = (item.content as any).toString().match(/<img[^>]+src="([^">]+)"/)[1]
+    console.log('thumbnail', thumbnail);
+    return thumbnail
+  }
+
   return (
     <div>
       <Head>
@@ -37,9 +43,10 @@ function Articles({ items }: ItemsProps) {
         <meta name='keywords' content='alex wasik, software, developer, software developer, articles' />
         <meta name='robots' content='index, follow' />
         <meta name='DC.title' content='Alex Wasik - Articles' />
-      </Head>          
+      </Head>
       <Row justify='center' gutter={[24,24]}>
-        {items.map((item: ContentItem) => {          
+        {items.map((item: ContentItem) => {
+
           return (
             <Col
               xs={24}
@@ -55,7 +62,7 @@ function Articles({ items }: ItemsProps) {
                     unoptimized={true}
                     loader={myLoader}
                     alt='story image'
-                    src={item.thumbnail}
+                    src={parseThumbnail(item)}
                     width={1200}
                     height={700}
                   />
