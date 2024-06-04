@@ -19,10 +19,10 @@ const Resume = () => {
           <meta name='keywords' content='alex wasik, software, developer, software developer, resume' />
           <meta name='robots' content='index, follow' />
           <meta name='DC.title' content='Alex Wasik - Resume' />
-        </Head>    
+        </Head>
         <Viewer
             theme="dark"
-            fileUrl='/assets/resume.pdf'
+            fileUrl='/assets/Alex_Wasik_Resume.pdf'
             plugins={[
                 defaultLayoutPluginInstance,
             ]}
