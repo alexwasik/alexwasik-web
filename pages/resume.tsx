@@ -12,17 +12,17 @@ import '@react-pdf-viewer/default-layout/lib/styles/index.css';
 const Resume = () => {
   const defaultLayoutPluginInstance = defaultLayoutPlugin();
   return (
-      <Worker workerUrl="https://unpkg.com/pdfjs-dist@2.12.313/build/pdf.worker.min.js">
+      <Worker workerUrl="https://unpkg.com/pdfjs-dist@2.16.105/build/pdf.worker.min.js">
         <Head>
           <title>Alex Wasik - Resume</title>
           <meta name='description' content='Alex Wasik - Resume' />
-          <meta name='keywords' content='alex wasik, software, developer, software developer, resume' />
+          <meta name='keywords' content='alex wasik, software, developer, software developer, manager, resume' />
           <meta name='robots' content='index, follow' />
           <meta name='DC.title' content='Alex Wasik - Resume' />
         </Head>
         <Viewer
             theme="dark"
-            fileUrl='/assets/Alex_Wasik_Resume.pdf'
+            fileUrl='/assets/Wasik-Resume.pdf'
             plugins={[
                 defaultLayoutPluginInstance,
             ]}
